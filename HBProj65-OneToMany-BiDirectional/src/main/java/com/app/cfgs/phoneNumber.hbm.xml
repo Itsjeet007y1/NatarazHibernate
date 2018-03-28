@@ -1,0 +1,10 @@
+ <!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.app.domain.PhoneNumber" table="phone_numbers_BD">
+		<id name="phone"/>
+		<property name="numberType" column="number_type"/>
+		<many-to-one name="user" class="com.app.domain.User" column="unidFk" cascade="all" lazy="proxy"/>
+	</class>
+</hibernate-mapping>

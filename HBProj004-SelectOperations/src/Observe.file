@@ -1,0 +1,44 @@
+Get() method (early loading)
+==========================
+Before Getting:1460126155
+Hibernate: 
+    select
+        product0_.pid as pid1_0_0_,
+        product0_.pname as pname2_0_0_,
+        product0_.qnty as qnty3_0_0_,
+        product0_.price as price4_0_0_ 
+    from
+        newproduct product0_ 
+    where
+        product0_.pid=?
+After Getting:1963974958
+Hibernate: 
+    delete 
+    from
+        newproduct 
+    where
+        pid=?
+Object deleted..
+
+
+Load() method (Lazy or Late Loading)
+==================================
+Before Load: 1460126155
+After Load:94682872
+Hibernate: 
+    select
+        product0_.pid as pid1_0_0_,
+        product0_.pname as pname2_0_0_,
+        product0_.qnty as qnty3_0_0_,
+        product0_.price as price4_0_0_ 
+    from
+        newproduct product0_ 
+    where
+        product0_.pid=?
+Hibernate: 
+    delete 
+    from
+        newproduct 
+    where
+        pid=?
+Object deleted successfully...

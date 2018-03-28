@@ -1,0 +1,25 @@
+ <!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd"> 
+<hibernate-configuration>
+	<session-factory>
+	
+		<!-- Database connection Properties -->
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="hibernate.connection.url">jdbc:mysql://node36437-ntajhosting.cloud.cms500.com/myuser</property>
+		<property name="hibernate.connection.username">myuser</property>
+		<property name="hibernate.connection.password">lbLr4yhoDQAE1mKl</property>
+		<!-- <property name="connection.pool_size">30</property> -->
+		
+		
+		<!-- Hibernate specific properties -->		
+		<property name="hibernate.show_sql">true</property>
+		<property name="hibernate.format_sql">true</property>
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
+		<property name="hibernate.hbm2ddl.auto">update</property>
+		
+		<!-- Mapping file Configuration -->
+		<mapping class="com.app.domain.Student"/>
+		<mapping class="com.app.domain.LibraryMembership"/>
+	</session-factory>
+</hibernate-configuration>

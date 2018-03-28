@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-mapping>
+	<class name="com.nt.domain.InsurencePolicy" table="policytab">
+		<id name="policyId" column="pid"/>
+		<property name="policyName" column="pname"/>
+		<property name="tenure" column="tenure"/>
+		<property name="premium" column="premium"/>
+	</class>
+</hibernate-mapping>

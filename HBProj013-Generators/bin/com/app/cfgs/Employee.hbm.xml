@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-mapping>
+	<class name="com.app.domain.EmpDetails" table="emp_table">
+		<id name="no" column="eid" length="10"/>
+		<!-- 	<generator class="assigned"/>
+		</id> -->
+		<property name="fname" column="FirstName" length="20"/>
+		<property name="lname" column="LastName" length="20"/>
+		<property name="mail" column="Email" length="25"/>
+	</class>
+</hibernate-mapping>

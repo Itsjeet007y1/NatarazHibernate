@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.app.domain.Person" discriminator-value="per" table="INHM_Person1" abstract="true">
+		<id name="id">
+			<generator class="increment"/>
+		</id>
+		<property name="name" type="string" length="15"/>
+		<property name="company" type="string" length="15"/>
+		<joined-subclass name="com.app.domain.Employee" table="INHM_employee1">
+			<key column="pid_fk"/>
+			<property name="desg" type="string" length="15"/>
+			<property name="salary" type="float" length="10" precision="2"/>
+		</joined-subclass>
+		<joined-subclass name="com.app.domain.Customer" table="INHM_customer1">
+			<key column="pid_fk"/>
+			<property name="addrs" type="string" length="15"/>
+			<property name="billAmt" type="float" length="10" precision="2"/>
+		</joined-subclass>
+	</class>
+</hibernate-mapping>

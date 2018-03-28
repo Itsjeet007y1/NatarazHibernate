@@ -1,0 +1,23 @@
+ <!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping> 
+	<class name="com.app.domain.EmpDetails" table="Employee">
+	   <id name="no" column="EID"/> <!-- Singular Identifier Cfg -->
+		<property name="fname" column="FIRSTNAME"/>
+		<property name="lname"  column="LASTNAME"/>
+		<property name="mail"  column="EMAIL"/>
+	</class>
+	<sql-query name="GET_EMPS_BY_RANGE">
+	  <return  class="com.app.domain.EmpDetails"/>
+	   <![CDATA[
+	       select * from Employee  where eid>=:min and eid<=:max
+	    ]]>
+	</sql-query>
+	<sql-query name="GET_EMPS_COUNT">
+	  <return-scalar  column="count(*)" type="int"/>
+	     select count(*) from Employee 
+	</sql-query>
+
+</hibernate-mapping>

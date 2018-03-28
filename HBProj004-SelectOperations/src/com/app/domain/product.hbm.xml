@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-mapping>
+	<class name="com.app.domain.Product" table="newproduct">
+		<id name="productId" column="pid"/>
+		<property name="productName" column="pname"/>
+		<property name="quantity" column="qnty"/>
+		<property name="price" column="price"/>
+	</class>
+</hibernate-mapping>

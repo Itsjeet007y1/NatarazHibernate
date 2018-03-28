@@ -1,0 +1,16 @@
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.app.domain.Project" table="projects_idbag">
+		<id name="proid"/>
+		<property name="proname" length="20"/>
+		<idbag name="programmers" table="programmers_projects_idbag" cascade="all" lazy="extra">
+			<collection-id column="prgmr_proj_indx" type="int">
+				<generator class="increment"/>
+			</collection-id>
+			<key column="project_id"/>
+			<many-to-many class="com.app.domain.Programmer" column="programmer_id"/>
+		</idbag>
+	</class>
+</hibernate-mapping>

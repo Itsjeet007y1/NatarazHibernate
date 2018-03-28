@@ -1,0 +1,13 @@
+<web-app>
+	<servlet>
+		<servlet-name>std</servlet-name>
+		<servlet-class>com.app.controller.StudentController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>std</servlet-name>
+		<url-pattern>/student</url-pattern>
+	</servlet-mapping>
+	<welcome-file-list>
+		<welcome-file>input.html</welcome-file>
+	</welcome-file-list>
+</web-app>

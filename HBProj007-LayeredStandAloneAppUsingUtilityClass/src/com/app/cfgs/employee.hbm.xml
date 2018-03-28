@@ -1,0 +1,8 @@
+<hibernate-mapping>
+	<class name="com.app.domain.Employee" table="emp8">
+		<id name="empId" column="eid"/>
+		<property name="empName" column="ename"/>
+		<property name="empSal" column="esal"/>
+		<property name="empMail" column="email"/>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,29 @@
+ <!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping> 
+	<class name="com.app.domain.EmpDetails" table="Employee">
+	   <id name="no" column="EID"/> <!-- Singular Identifier Cfg -->
+		<property name="fname" column="FIRSTNAME"/>
+		<property name="lname"  column="LASTNAME"/>
+		<property name="mail"  column="EMAIL"/>
+	</class>
+	  <sql-query name="CALL_FX" callable="true">
+         <return  class="com.app.domain.EmpDetails"/>
+             <!-- { ?=call  Fx_GET_EMPDETAILS_BY_RANGE(:start,:end)} -->
+              { ?=call  Fx_GET_EMPDETAILS_BY_RANGE(?,?)}
+      </sql-query>
+	</hibernate-mapping>
+	
+	
+<!-- 	create or replace function Fx_GET_EMPDETAILS_BY_RANGE(min in number, max in number)
+return SYS_REFCURSOR
+as 
+    details  SYS_REFCURSOR;
+begin
+  open details for
+   SELECT EID,FIRSTNAME,LASTNAME,EMAIL FROM
+                         EMPLOYEE WHERE EID>=min and EID<=max;
+return details;
+end; -->

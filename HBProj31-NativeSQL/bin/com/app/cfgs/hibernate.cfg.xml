@@ -1,0 +1,21 @@
+ <!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd"> 
+
+<hibernate-configuration>
+	<session-factory>
+	   <!-- hibernate connection properies -->
+		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="connection.url">jdbc:mysql:///test</property>
+		<property name="connection.username">root</property>
+		<property name="connection.password">root</property>
+		<!-- <property name="connection.pool_size">30</property> -->
+		<!-- Hibernate properties -->
+		<property name="hibernate.show_sql">true</property>
+		<property name="hibernate.format_sql">true</property>
+		<property name="hibernate.hbm2ddl.auto">update</property>
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
+        <!-- mapping file cfg -->
+		<mapping resource="com/app/cfgs/Employee.hbm.xml" />
+	</session-factory>
+</hibernate-configuration>

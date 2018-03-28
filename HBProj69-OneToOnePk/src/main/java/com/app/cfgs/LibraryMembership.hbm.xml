@@ -1,0 +1,14 @@
+ <!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.app.domain.LibraryMembership" table="librarymember_o2o_pk">
+		<id name="lid">
+			<generator class="foreign">
+				<param name="property">studentDetails</param>
+			</generator>
+		</id>
+		<property name="doj"/>
+		<one-to-one name="studentDetails" class="com.app.domain.Student" cascade="all" lazy="proxy"/>
+	</class>
+</hibernate-mapping>

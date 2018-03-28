@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-mapping>
+	<class name="com.nt.domain.Employee" table="newEmptab">
+		<id name="empId" column="eid" />
+		<property name="empName" column="ename" />
+		<property name="empSal" column="esal" />
+		<property name="empMail" column="email" />
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="F:/Java Softwares/NTDVD/Natraj Sir DVD-3/HibernateRequiredJars/antlr-2.7.7.jar"/>
+	<classpathentry kind="lib" path="F:/Java Softwares/NTDVD/Natraj Sir DVD-3/HibernateRequiredJars/classmate-1.3.0.jar"/>
+	<classpathentry kind="lib" path="F:/Java Softwares/NTDVD/Natraj Sir DVD-3/HibernateRequiredJars/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="F:/Java Softwares/NTDVD/Natraj Sir DVD-3/HibernateRequiredJars/geronimo-jta_1.1_spec-1.1.1.jar"/>
+	<classpathentry kind="lib" path="F:/Java Softwares/NTDVD/Natraj Sir DVD-3/HibernateRequiredJars/hibernate-commons-annotations-5.0.1.Final.jar"/>
+	<classpathentry kind="lib" path="F:/Java Softwares/NTDVD/Natraj Sir DVD-3/HibernateRequiredJars/hibernate-core-5.1.0.Final.jar"/>
+	<classpathentry kind="lib" path="F:/Java Softwares/NTDVD/Natraj Sir DVD-3/HibernateRequiredJars/hibernate-entitymanager-5.1.0.Final.jar"/>
+	<classpathentry kind="lib" path="F:/Java Softwares/NTDVD/Natraj Sir DVD-3/HibernateRequiredJars/hibernate-envers-5.1.0.Final.jar"/>
+	<classpathentry kind="lib" path="F:/Java Softwares/NTDVD/Natraj Sir DVD-3/HibernateRequiredJars/hibernate-java8-5.1.0.Final.jar"/>
+	<classpathentry kind="lib" path="F:/Java Softwares/NTDVD/Natraj Sir DVD-3/HibernateRequiredJars/hibernate-jpa-2.1-api-1.0.0.Final.jar"/>
+	<classpathentry kind="lib" path="F:/Java Softwares/NTDVD/Natraj Sir DVD-3/HibernateRequiredJars/hibernate-jpamodelgen-5.1.0.Final.jar"/>
+	<classpathentry kind="lib" path="F:/Java Softwares/NTDVD/Natraj Sir DVD-3/HibernateRequiredJars/hibernate-osgi-5.1.0.Final.jar"/>
+	<classpathentry kind="lib" path="F:/Java Softwares/NTDVD/Natraj Sir DVD-3/HibernateRequiredJars/jandex-2.0.0.Final.jar"/>
+	<classpathentry kind="lib" path="F:/Java Softwares/NTDVD/Natraj Sir DVD-3/HibernateRequiredJars/javassist-3.20.0-GA.jar"/>
+	<classpathentry kind="lib" path="F:/Java Softwares/NTDVD/Natraj Sir DVD-3/HibernateRequiredJars/jboss-logging-3.3.0.Final.jar"/>
+	<classpathentry kind="lib" path="F:/Java Softwares/NTDVD/Natraj Sir DVD-3/HibernateRequiredJars/mysql-connector-java-5.1.6.jar"/>
+	<classpathentry kind="lib" path="F:/Java Softwares/NTDVD/Natraj Sir DVD-3/HibernateRequiredJars/ojdbc14.jar"/>
+	<classpathentry kind="lib" path="F:/Java Softwares/NTDVD/Natraj Sir DVD-3/HibernateRequiredJars/org.osgi.compendium-4.3.1.jar"/>
+	<classpathentry kind="lib" path="F:/Java Softwares/NTDVD/Natraj Sir DVD-3/HibernateRequiredJars/org.osgi.core-4.3.1.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

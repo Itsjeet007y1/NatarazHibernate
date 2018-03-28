@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-mapping>
+	<class name="com.app.domains.ProgrammersProjectsInfo" table="programmers_projects_info">
+		<composite-id name="ids" class="com.app.domains.IdClass">
+			<key-property name="programmerId" column="prgmr_id"/>
+			<key-property name="projectId" column="proj_id"/>
+		</composite-id>
+		<property name="programmerName"/>
+		<property name="projecName"/>
+		<property name="status"/>
+	</class>
+</hibernate-mapping>

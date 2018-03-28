@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-mapping>
+	<class name="com.app.domain.Person" table="person_tab77">
+		<id name="id" type="int" length="10">
+			<generator class="increment"/>
+		</id>
+		<property name="pname" type="string" length="20"/>
+		<component name="pjob" class="com.app.domain.JobType">
+			<property name="job" type="string" length="20"/>
+			<property name="deptNo" type="int" length="10"/>
+			<property name="salary" type="float" length="5" precision="2"/>
+		</component>
+	</class>
+</hibernate-mapping>

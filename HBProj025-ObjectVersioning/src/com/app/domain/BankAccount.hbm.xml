@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-mapping>
+	<class name="com.app.domain.BankAccount" table="Bank_Account">
+		<id name="acno" type="long">
+			<generator class="increment"/>
+		</id>
+		<version name="version" column="version_col" type="int"/>
+		<property name="holderName" column="holder_name" type="string" length="20"/>
+		<property name="type" column="type" type="string" length="20"/>
+		<property name="balance" column="balance" type="float" length="10" precision="2"/>
+	</class>
+</hibernate-mapping>

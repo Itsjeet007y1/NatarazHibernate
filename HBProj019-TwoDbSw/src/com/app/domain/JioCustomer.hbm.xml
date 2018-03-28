@@ -1,0 +1,11 @@
+<!DOCTYPE hibernate-mapping
+  PUBLIC "-//Hibernate?Hibernate Mapping DTD//EN"
+  "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+  <hibernate-mapping>
+  	<class name="com.app.domain.MobileCustomer" table="JioCustomer_table">
+  		<id name="mobileNo" type="long"/>
+  		<property name="custName" length="15" type="string"/>
+  		<property name="idProofDoc" length="15" type="string"/>
+  		<property name="status" length="15" type="string"/>
+  	</class>
+  </hibernate-mapping>

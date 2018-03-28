@@ -1,0 +1,13 @@
+<proxool-config>
+  <proxool>
+     <alias>pool1</alias>
+	 <driver-class>com.mysql.jdbc.Driver</driver-class>
+	 <driver-url>jdbc:mysql:///test</driver-url>
+	 <driver-properties>
+	    <property name="user" value="root"/>
+		<property name="password" value="root"/>
+	 </driver-properties>
+     <minimum-connection-count>10</minimum-connection-count>
+	 <maximum-connection-count>20</maximum-connection-count>
+  </proxool>
+</proxool-config>

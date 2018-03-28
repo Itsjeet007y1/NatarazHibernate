@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+	<class name="com.app.domain.Person" table="INHM_Person4">
+		<id name="id">
+			<generator class="native" />
+		</id>
+		<discriminator column="Desc_Column" type="string" />
+		<property name="name" type="string" length="15" />
+		<property name="company" type="string" length="15" />
+		<!-- <subclass name="com.app.domain.Employee" discriminator-value="EMP"/> 
+			<subclass name="com.app.domain.Customer" discriminator-value="CUST"/> -->
+		<joined-subclass name="com.app.domain.Employee" table="INHM_employee4">
+			<key column="pid_fk" />
+			<property name="name" type="string" length="15" />
+			<property name="company" type="string" length="15" />
+			<property name="desg" type="string" length="15" />
+			<property name="salary" type="float" length="10" precision="2" />
+		</joined-subclass>
+		<joined-subclass name="com.app.domain.Customer" table="INHM_customer4">
+			<key column="pid_fk" />
+			<property name="name" type="string" length="15" />
+			<property name="company" type="string" length="15" />
+			<property name="addrs" type="string" length="15" />
+			<property name="billAmt" type="float" length="10" precision="2" />
+		</joined-subclass>
+	</class>
+
+
+</hibernate-mapping>

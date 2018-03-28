@@ -1,0 +1,15 @@
+<!DOCTYPE hibernate-mapping
+  PUBLIC "-//Hibernate?Hibernate Mapping DTD//EN"
+  "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class name="com.app.domain.LuckyDrawCoupan" table="TMC_LUCKYDRAWS_CUPONS">
+    <id name="cuponNo" type="string">
+      <generator class="com.app.generators.CustomTMCSequneceIdGenerator"/>
+    </id>
+    <property name="customerName" type="string" length="20"/>
+    <property name="billNo" type="int" length="10"/>
+    <property name="purchaseDate" type="date" />
+    <property name="billAmt" type="float" />
+  </class>
+</hibernate-mapping>

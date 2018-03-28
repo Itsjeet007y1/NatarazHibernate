@@ -1,0 +1,74 @@
+<!DOCTYPE hibernate-mapping
+  PUBLIC "-//Hibernate?Hibernate Mapping DTD//EN"
+  "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.app.domain.BankTxDetails" table="bank_tx_dtails_table">
+		
+		<!-- <id name="txId" length="10">
+			<generator class="increment"/>
+		</id> -->
+		
+		<!-- <id name="txId" length="10">
+			<generator class="identity"/>
+		</id> -->
+		
+		<!-- <id name="txId" length="10">
+			<generator class="sequence">
+				<param name="sequence_name">MY_SEQ</param>
+			</generator>
+		</id> -->
+		
+		<!-- <id name="txId" type="int" length="10">
+        <generator class="hilo" >
+          <param name="table">HB_HILO</param>
+          <param name="column">HB_HI</param>
+          <param name="max_lo">5</param>
+        </generator>
+     </id> -->
+     
+     <!-- <id name="txId" type="int" length="10">
+        <generator class="hilo" >
+          <param name="max_lo">2</param>
+        </generator>
+     </id> -->
+     
+     <!-- <id name="txId"  type="int" length="10">
+        <generator class="seqhilo">
+          <param name="sequence">TXID_SEQ</param>
+          <param name="max_lo">5</param>
+        </generator>
+     </id> -->
+     
+     <!-- <id name="txId"  type="int" length="10">
+       <generator class="native">
+          <param name="sequence_name">TXID_SEQ</param>
+       </generator>
+    </id> -->
+    
+   <!--  <id name="txId"  type="string">
+      <generator class="guid"/>
+   </id> -->
+   
+  <!--  <id name="txId"  type="string">
+       <generator class="uuid">
+          <param name="separator">,</param>
+       </generator>
+     </id> -->
+     
+     <!-- <id name="txId" type="string">
+      <generator class="select">
+        <param name="key">txAmount</param> Select is used for triggers only 
+      </generator>
+    </id> -->
+     
+     <id name="txId"  type="string">
+       <generator class="uuid">
+          <param name="separator">,</param>
+       </generator>
+     </id>
+		
+		<property name="txName" length="20"/>
+		<property name="txAmount" length="10"/>
+		<property name="txDate" type="date"/>
+	</class>
+</hibernate-mapping>

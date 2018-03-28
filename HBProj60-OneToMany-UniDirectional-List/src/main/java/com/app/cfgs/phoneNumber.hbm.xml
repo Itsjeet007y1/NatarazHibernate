@@ -1,0 +1,9 @@
+ <!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.app.domain.PhoneNumber" table="phone_numbers2">
+		<id name="phone"/>
+		<property name="numberType" column="number_type"/>
+	</class>
+</hibernate-mapping>

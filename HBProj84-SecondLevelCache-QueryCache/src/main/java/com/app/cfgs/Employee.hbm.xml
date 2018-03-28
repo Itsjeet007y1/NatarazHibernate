@@ -1,0 +1,12 @@
+ <!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.app.domain.Employee" table="Employee">
+		<cache usage="read-only"/>
+		<id name="no" column="eid"/>
+		<property name="fname" column="firstName"/>
+		<property name="lname" column="lastName"/>
+		<property name="mail" column="email"/>
+	</class>
+</hibernate-mapping>

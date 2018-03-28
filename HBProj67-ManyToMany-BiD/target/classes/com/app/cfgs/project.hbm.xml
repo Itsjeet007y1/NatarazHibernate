@@ -1,0 +1,13 @@
+ <!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.app.domain.Project" table="layered_projects">
+		<id name="proid"/>
+		<property name="proname"/>
+		<set name="programmers" table="programmers_projects" cascade="all" lazy="extra" inverse="true">
+			<key column="project_id"/>
+			<many-to-many class="com.app.domain.Programmer" column="programmer_id"/>
+		</set>
+	</class>
+</hibernate-mapping>

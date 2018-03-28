@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-configuration>
+ <session-factory>
+	<property name="connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+	<property name="connection.url">jdbc:oracle:thin:@localhost:1521:xe</property>
+	<property name="connection.username">system</property>
+	<property name="connection.password">manager</property>
+	<property name="show_sql">true</property>
+	<property name="format_sql">true</property>
+	<property name="hbm2ddl.auto">update</property>
+	<property name="dialect">org.hibernate.dialect.OracleDialect</property>
+	<mapping resource="/com/app/domain/LuckyDrawCoupan.hbm.xml"/>
+ </session-factory>
+</hibernate-configuration>
+
+

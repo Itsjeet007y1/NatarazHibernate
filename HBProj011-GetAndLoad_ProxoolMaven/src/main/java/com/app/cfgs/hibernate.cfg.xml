@@ -1,0 +1,23 @@
+<?xml version="1.0"  encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+ "-//Hibernate/Hibernate Configuration DTD 3.0//EN" 
+ "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+		<property name="connection.connection_provider">org.hibernate.connection.ProxoolConnectionProvider</property>
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="hibernate.connection.url">jdbc:mysql:///test</property>
+		<!-- Proxool pool cfgs -->
+		<property name="proxool.pool_alias">pool1</property>
+		<property name="proxool.xml">/com/app/cfgs/proxool.cfgs.xml</property>
+		 
+		<!-- Hibernate properties -->
+		<property name="hibernate.show_sql">true</property>
+		<property name="hibernate.format_sql">true</property>
+		<property name="hibernate.hbm2ddl.auto">update</property>
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
+		<!-- mapping file -->
+		<mapping resource="com/app/domain/InsurancePolicy.hbm.xml" />
+	</session-factory>
+</hibernate-configuration>

@@ -1,0 +1,13 @@
+ <!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.app.domain.User" table="user_table">
+		<id name="userId" column="user_id"/>
+		<property name="userName" column="user_name"/>
+		<set name="phones" cascade="all-delete-orphan" lazy="extra">
+			<key column="unidFK"/>
+			<one-to-many class="com.app.domain.PhoneNumber"/>
+		</set>
+	</class>
+</hibernate-mapping>

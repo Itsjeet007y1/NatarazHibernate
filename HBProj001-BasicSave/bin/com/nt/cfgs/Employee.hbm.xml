@@ -1,0 +1,10 @@
+<hibernate-mapping>
+	<class name="com.nt.domain.EmpDetails" table="Employee">
+		<id name="no" column="eid" unsaved-value="101">
+			<generator class="increment"/>
+		</id>
+		<property name="fname" column="FirstName"/>
+		<property name="lname" column="LastName"/>
+		<property name="mail" column="Email"/>
+	</class>
+</hibernate-mapping>

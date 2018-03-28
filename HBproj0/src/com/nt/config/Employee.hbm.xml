@@ -1,0 +1,8 @@
+<hibernate-mapping>
+	<class name="com.nt.pojo.Employee" table="Employee">
+		<id name="empId" column="eid"/>
+		<property name="fName" column="fname"/>
+		<property name="lname" column="lname"/>
+		<property name="mail" column="email"/>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,11 @@
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.app.domain.Employee" table="Employee21">
+		<id name="empNo"/>
+		<property name="empName"/>
+		<property name="salary"/>
+		<many-to-one name="dept" class="com.app.domain.Department" cascade="all" lazy="proxy" column="deptNo"/>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,9 @@
+<hibernate-mapping>
+	<class name="com.app.bo.StudentBO" table="stdtab">
+		<id name="sno" column="sno"/>
+		<property name="sname" column="sname"/>
+		<property name="total" column="total"/>
+		<property name="avg" column="avg"/>
+		<property name="result" column="result"/>
+	</class>
+</hibernate-mapping>

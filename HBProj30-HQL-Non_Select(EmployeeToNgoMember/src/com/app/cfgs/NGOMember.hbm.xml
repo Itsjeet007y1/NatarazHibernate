@@ -1,0 +1,12 @@
+ <!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping> 
+	<class name="com.app.domain.NGOMember" table="NGOMember">
+	   <id name="mid" column="MID"/> <!-- Singular Identifier Cfg -->
+		<property name="fname"  column="FIRSTNAME"/>
+		<property name="lname"  column="LASTNAME"/>
+		<property name="mail"  column="EMAIL"/>
+	</class>
+</hibernate-mapping>

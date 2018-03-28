@@ -1,0 +1,1 @@
+<a href="controller?param=allDetails">View Details</a>

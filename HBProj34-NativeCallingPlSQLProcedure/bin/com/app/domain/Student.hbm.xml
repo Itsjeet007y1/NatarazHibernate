@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-mapping>
+	<class name="com.app.domain.Student" table="student">
+		<id name="sno" column="no"/>
+		<property name="sname" column="name"/>
+		<property name="sadd" column="addrs"/>
+	</class>
+	<sql-query name="CALL_PROCEDURE" callable="true">
+		<return-scalar column="name" type="string"/>
+		<return-scalar column="addrs" type="string"/>
+		{call P_GET_STUDS_BY_NAMECHARS(?,:initChars)}
+	</sql-query>
+</hibernate-mapping>
